@@ -19,4 +19,11 @@ public class UserDao {
         String sql = "select * from t_user where email = ?";
         return DBHelp.query(sql,new BeanHandler<User>(User.class),email);
     }
+
+    public void update(User user) {
+        String sql = "update t_user set password = ?,avatar = ?,email = ?,loginip = ?,logintime = ?,state = ?where id = ?";
+        DBHelp.update(sql,user.getPassword(),user.getAvatar(),user.getEmail(),user.getLoginip(),user.getLogintime(),user.getState(),user.getId());
+
+
+    }
 }
