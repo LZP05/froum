@@ -30,8 +30,13 @@ public class BaseServlet extends HttpServlet {
         out.print(result);
         out.flush();
         out.close();
-
     }
 
-
+    public String getRemoteIp(HttpServletRequest request){
+        String ip = request.getRemoteAddr();
+        if ("0:0:0:0:0:0:0:1".equals(ip)){
+            ip = "127.0.0.1";
+        }
+        return ip;
+    }
 }
