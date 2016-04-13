@@ -26,4 +26,10 @@ public class UserDao {
 
 
     }
+
+
+    public User findById(Integer uid) {
+        String sql = "select * from t_user where id=?";
+        return DBHelp.query(sql,new BeanHandler<User>(User.class),uid);
+    }
 }

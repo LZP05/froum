@@ -21,6 +21,9 @@
             <c:when test="${param.state == '1002'}">
                 <div class="alert alert-success">你已经安全退出</div>
             </c:when>
+            <c:when test="${param.state == '1003'}">
+                <div class="alert alert-success">密码设置成功，请重新登录</div>
+            </c:when>
         </c:choose>
 
         <form action="" class="form-horizontal" id="loginForm">
@@ -39,13 +42,12 @@
             <div class="control-group">
                 <label class="control-label"></label>
                 <div class="controls">
-                    <a href="foundPassword.html">忘记密码</a>
+                    <a href="/forget/password.do">忘记密码</a>
                 </div>
             </div>
 
             <div class="form-actions">
                 <button class="btn btn-primary" type="button" id="loginBtn">登录</button>
-
                 <a class="pull-right" href="/reg.do">注册账号</a>
             </div>
 
@@ -78,7 +80,7 @@
                 },
                 password:{
                     required:true
-                },
+                }
 
             },
             messages:{
@@ -97,13 +99,11 @@
                     data:$(form).serialize(),
                     beforeSend:function(){
                         $btn.text("登录中...").attr("disabled","disabled");
-
                     },
                     success:function(json){
                         if(json.state =='error'){
                             alert(json.message);
                         }else{
-                            console.log(111);
                             window.location.href = "/index.do";
                         }
                     },

@@ -35,86 +35,101 @@
       <scope>provided</scope>
     </dependency>
 
+    <!--jstl标签库-->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
 
+    <!--跨域操作-->
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>4.5</version>
     </dependency>
 
+    <!--io流-->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.4</version>
     </dependency>
 
+    <!--生成json-->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.6.2</version>
     </dependency>
 
+    <!--数据库连接池-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-dbcp2</artifactId>
       <version>2.1.1</version>
     </dependency>
 
+    <!--jdbc工具类的库-->
     <dependency>
       <groupId>commons-dbutils</groupId>
       <artifactId>commons-dbutils</artifactId>
       <version>1.6</version>
     </dependency>
 
+    <!--链接数据库-->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.38</version>
     </dependency>
 
+    <!--七牛云，上传照片的-->
     <dependency>
       <groupId>com.qiniu</groupId>
       <artifactId>qiniu-java-sdk</artifactId>
       <version>7.0.8</version>
     </dependency>
 
-
+    <!--用来弥补java lang包的不足-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.4</version>
     </dependency>
 
-
+    <!--优化java集合生成-->
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>19.0</version>
     </dependency>
 
-
+    <!--时间辅助库-->
     <dependency>
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <version>2.9.3</version>
     </dependency>
 
-
+    <!--加密-->
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.10</version>
     </dependency>
-
+    <!--验证码-->
     <dependency>
       <groupId>com.github.pusuo</groupId>
       <artifactId>patchca</artifactId>
       <version>d3e2b0b5ba</version>
+    </dependency>
+
+    <!--邮箱-->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-email</artifactId>
+      <version>1.4</version>
     </dependency>
 
 
@@ -150,8 +165,6 @@
       </plugin>
 
     </plugins>
-
-
 
   </build>
 </project>
